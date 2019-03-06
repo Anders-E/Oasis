@@ -7,12 +7,22 @@ module Oasis (
 import Utils
 
 -- A000004
--- The zero sequence.
+-- The zero sequence:
 --
 -- a(n) = 0 for all integer n.
 --
 a000004 :: [Integer]
 a000004 = repeat 0
+
+-- A000005
+-- d(n) (also called tau(n) or sigma_0(n)):
+--
+-- The number of divisors of n.
+--
+a000005 :: [Integer]
+a000005 = map numOfDivs [1..]
+numOfDivs :: Integer -> Integer
+numOfDivs n = sum [1 | x <- [1..n `div` 2], n `mod` x == 0] + 1
 
 -- A000045
 -- Fibonacci numbers:
