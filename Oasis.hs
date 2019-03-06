@@ -6,6 +6,13 @@ module Oasis (
 
 import Utils
 
+-- A000004
+-- The zero sequence.
+--
+-- a(n) = 0 for all integer n.
+--
+a000004 :: [Integer]
+a000004 = repeat 0
 
 -- A000045
 -- Fibonacci numbers:
