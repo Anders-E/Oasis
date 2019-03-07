@@ -24,6 +24,14 @@ a000005 = map numOfDivs [1..]
 numOfDivs :: Integer -> Integer
 numOfDivs n = sum [1 | x <- [1..n `div` 2], n `mod` x == 0] + 1
 
+-- A000012
+-- The all 1's sequence:
+--
+-- f(n) = 1
+--
+a000011 :: [Integer]
+a000011 = repeat 1
+
 -- A000045
 -- Fibonacci numbers:
 --
