@@ -22,7 +22,8 @@ a000004 = repeat 0
 a000005 :: [Integer]
 a000005 = map numOfDivs [1..]
 numOfDivs :: Integer -> Integer
-numOfDivs n = sum [1 | x <- [1..n `div` 2], n `mod` x == 0] + 1
+numOfDivs n = sum [1 | x <- [1..nSquared + 1], n `mod` x == 0]
+    where nSquared = floor (fromIntegral n ** 2)
 
 -- A000012
 -- The all 1's sequence:
